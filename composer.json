@@ -1,6 +1,6 @@
 {
     "name": "aldrumo/blocks",
-    "description": "Laravel based Theme manager for your application",
+    "description": "Content blocks system for Aldrumo",
     "type": "library",
     "license": "MIT",
     "authors": [
