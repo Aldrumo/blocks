@@ -25,6 +25,7 @@ class BlocksServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->bootMigrations();
+        $this->bootViews();
     }
 
     protected function bootMigrations()
