@@ -2,21 +2,31 @@
 
 namespace Aldrumo\Blocks\View\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Renderer extends Component
 {
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|string
-     */
-    public function render()
+    /** @var string */
+    public $key;
+
+    /** @var string|null */
+    public $content;
+
+    public function __construct(string $key, ?string $content = null)
+    {
+        $this->key = $key;
+        $this->content = $content;
+    }
+
+    public function render(): View
     {
         return view(
             'Blocks::components.renderer',
             [
                 'inEditor' => resolve('inEditor') ?? false,
+                'key'      => $this->key,
+                'content'  => $this->content,
             ]
         );
     }
