@@ -24,7 +24,6 @@ class Renderer extends Component
         return view(
             'Blocks::components.renderer',
             [
-                'inEditor' => resolve('inEditor') ?? false,
                 'key'      => $this->key,
                 'content'  => $this->content,
             ]
