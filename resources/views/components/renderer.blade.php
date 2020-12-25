@@ -1,5 +1,5 @@
 @if ($inEditor)
-<div class="content-editor" id="{{ $key }}">{{ $slot }}</div>
+<div class="content-editor" id="{{ $key }}">{!! $content ?: $slot !!}</div>
 @else
-{{ $slot }}
+{!! $content ?: $slot !!}
 @endif
