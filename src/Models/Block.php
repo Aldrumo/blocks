@@ -11,6 +11,8 @@ class Block extends Model
         'content',
     ];
 
+    protected $touches = ['item'];
+
     public function item()
     {
         return $this->morphTo();
